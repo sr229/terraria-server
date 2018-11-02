@@ -1,0 +1,10 @@
+#!/bin/bash
+export HOME=/home/terra
+export USER_ID=$(id -u)
+export GROUP_ID=$(id -g)
+
+if [ -w /etc/passwd ]; then
+  # echo "terra:x:$(id -u):$(id -g):terra terra:${HOME}:/sbin/nologin" >> /etc/passwd
+  sed -e "s/^\(terra:[^:]\):[0-9]*:[0-9]*:/\1:$USER_ID:$GROUP_ID:/" /etc/passwd > /etc/passwd;
+fi
+exec "$@"
