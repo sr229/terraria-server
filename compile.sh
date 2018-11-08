@@ -33,8 +33,8 @@ mkdir -p /opt/Terraria/config && \
 chmod g+rw /opt/Terraria/ && \
 chmod g+rw /opt/Terraria/* && \
 chmod g+rw /opt/Terraria/*/* && \
-chmod g+rw /opt/Terraria/tshock/* && \
 chown -R terra:terra /opt/Terraria/ && chown -R terra:terra /opt/Terraria/* && chown -R terra:terra /opt/Terraria/tshock/*.*;
+chown -R terra:0 /opt && \
 chgrp -R 0 /home/terra && \
 chmod a+x /home/terra/entrypoint && \
 chmod a+x /home/terra/exec && \
