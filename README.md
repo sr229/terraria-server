@@ -18,6 +18,17 @@ We require Docker or Podman to run the container, but I highly suggest Podman si
 
 for version-specific, just do for example v4.3.25, `docker pull chinodesuuu/terraria-server:v4.3.25` or `podman pull chinodesuuu/terraria-server:v4.3.25`.
 
+Run the server by using `docker run` or `podman run` with port exposed to 7777.
+
+To use your existing configurations or worlds, you need to host mount the location to the following:
+
+- Terraria world mounts in `/opt/Terraria/world`.
+- TShock configs mounts in `/opt/Terraria/config`.
+- TShock server logs mounts in `/opt/Terraria/tshock/logs`.
+- TShock server plugins mounts in `/opt/Terraria/tshock/ServerPlugins`.
+
+To use your existing configs, just mount to the following container directory mounts. Example `podman run -v /path/to/config: /opt/Terraria/config -p 7777:7777 chinodesuuu/terraria-server:v4.3.25`.
+
 ## License
 
 TShock is Copyright &copy; Pyraxis under GPL 3.0.
