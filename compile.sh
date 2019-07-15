@@ -2,7 +2,7 @@
 set -e
 
 # Maintainers: if there's a new version of TShock, just change this.
-TSHOCK_TAG="4.3.25"
+TSHOCK_TAG="4.3.26"
 
 # Step 1: Install the program
 
