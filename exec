@@ -1,6 +1,6 @@
 #!/bin/sh
 
 export mono_args="--server --gc=sgen -O=all"
-export exe_args="-worldpath /opt/Terraria/world -configpath /opt/Terraria/config -logpath /opt/Terraria/logs"
+export exe_args="-worldpath /opt/Terraria/world -world openshift.wld -maxplayers $TERRARIA_MAXPLAYERS -configpath /opt/Terraria/config -logpath /opt/Terraria/logs -autocreate 3"
 
 $(command -v mono) $mono_args /opt/Terraria/tshock/TerrariaServer.exe $exe_args
