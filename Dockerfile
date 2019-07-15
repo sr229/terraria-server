@@ -1,5 +1,7 @@
 FROM mono:5
 
+ENV TERRARIA_MAXPLAYERS 12
+
 COPY exec /home/terra/
 COPY entrypoint /home/terra/
 COPY compile.sh /tmp
